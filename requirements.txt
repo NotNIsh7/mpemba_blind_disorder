@@ -1,0 +1,7 @@
+# Python 3.13; versions used for every result in this repository
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+physics-tenpy==1.1.1   # DMRG only (interacting/dmrg_slow_mode.py)
+# LaTeX for the paper: TeX Live 2023 with revtex4-2 and quantikz
+# (Debian: texlive-latex-extra texlive-publishers texlive-science)
