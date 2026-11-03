@@ -1,0 +1,8 @@
+# Bond-dimension convergence of the DMRG slow mode (h0=4, V=4, gamma=4).
+# L=16 (seed 2, compared with exact diagonalization: lambda1=-0.01244051, r=+0.020454)
+chi_max=24: -E1=-0.01245259 r=+0.020389
+chi_max=48: -E1=-0.01244053 r=+0.020454
+chi_max=96: -E1=-0.01244051 r=+0.020454
+# L=24 (seed 999)
+chi_max=64: |lambda1|*L^2=3.17926 r=+0.040033
+chi_max=96: |lambda1|*L^2=3.17924 r=+0.040034

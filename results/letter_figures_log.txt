@@ -1,0 +1,52 @@
+written; sample leftover r = -0.0647
+wrote tail_index_law.pdf / .png
+
+asymptotic-window fits used in panel (a):
+   alpha= 4.000   -0.499 +/- 0.009   theory -0.500
+   alpha= 3.000   -0.514 +/- 0.009   theory -0.500
+   alpha= 2.500   -0.492 +/- 0.010   theory -0.500
+   alpha= 2.000   -0.448 +/- 0.014   theory -0.500
+   alpha= 1.667   -0.388 +/- 0.022   theory -0.400
+   alpha= 1.429   -0.294 +/- 0.026   theory -0.300
+   alpha= 1.250   -0.151 +/- 0.026   theory -0.200
+   alpha= 1.111   -0.122 +/- 0.023   theory -0.100
+bounded: crossing at t|lam1| = 0.219, late-time kappa|r| = 0.0460
+a1.25: crossing at t|lam1| = 0.219, late-time kappa|r| = 0.1490
+bounded: median-reach slope 0.510 (theory 0.5)
+a2.5: median-reach slope 0.428 (theory 0.5)
+a1.25: median-reach slope 0.207 (theory 0.2)
+alpha=1.25 kappa=20: data [0.259, 0.308, 0.356, 0.385, 0.455, 0.506, 0.564]  stable law [0.237, 0.284, 0.334, 0.389, 0.447, 0.506, 0.566]
+alpha=1.25 kappa=50: data [0.114, 0.118, 0.142, 0.169, 0.189, 0.227, 0.259]  stable law [0.097, 0.118, 0.141, 0.167, 0.196, 0.23, 0.267]
+bounded median reach: [np.float64(32.6), np.float64(46.9), np.float64(66.9), np.float64(98.5), np.float64(129.6), np.float64(194.1), np.float64(275.6)]  quantum: [np.float64(26.0), np.float64(30.8), np.float64(44.9), np.float64(59.4), np.float64(74.9)]
+a2.5 median reach: [np.float64(29.4), np.float64(39.9), np.float64(53.4), np.float64(68.2), np.float64(94.2), np.float64(131.0), np.float64(175.5)]  quantum: [np.float64(18.4), np.float64(26.8), np.float64(23.7), np.float64(31.9), np.float64(37.6)]
+a1.25 median reach: [np.float64(9.7), np.float64(11.6), np.float64(13.3), np.float64(14.8), np.float64(17.4), np.float64(20.4), np.float64(23.3)]  quantum: [np.float64(6.6), np.float64(8.7), np.float64(8.9), np.float64(10.5), np.float64(10.4)]
+written
+classical bounded fields, exponent of median d over L=64..4096:
+   W= 1: -0.492
+   W= 2: -0.490
+   W= 4: -0.510
+   W= 8: -0.480
+   W=16: -0.496
+Fig 1 sample: L=64, W=4, r=-0.0400
+Fig 2: kappa|r|=0.046, crossing at t|lam|=0.22, reach slope 0.510
+Fig 3c: L=256 median d/omega = 1.082
+Fig 3c: L=4096 median d/omega = 1.040
+Fig 3d: median 0.8154 vs Kolmogorov 0.8276
+all Stage 1 figures written
+alpha=2.50    classical  -0.372 +/- 0.018
+alpha=2.50   gamma=0.25  -0.472 +/- 0.038
+alpha=2.50    gamma=1.0  -0.396 +/- 0.040
+alpha=2.50    gamma=4.0  -0.378 +/- 0.030
+alpha=1.25    classical  -0.210 +/- 0.022
+alpha=1.25   gamma=0.25  -0.179 +/- 0.041
+alpha=1.25    gamma=1.0  -0.214 +/- 0.033
+alpha=1.25    gamma=4.0  -0.261 +/- 0.032
+s_alpha = 0.1976, mean of N^(1-1/a) r = +0.0029, median |.| = 0.2261
+kappa=20: data [0.259 0.308 0.356 0.385 0.455 0.506 0.564]
+   corrected [0.237 0.284 0.334 0.389 0.447 0.506 0.566]  max|diff| L>=256: 0.022
+   leading   [0.325 0.367 0.413 0.462 0.512 0.564 0.616]  range of (lead - data): 0.052 .. 0.076
+kappa=50: data [0.114 0.118 0.142 0.169 0.189 0.227 0.259]
+   corrected [0.097 0.118 0.141 0.167 0.196 0.23  0.267]  max|diff| L>=256: 0.008
+   leading   [0.136 0.156 0.179 0.204 0.233 0.266 0.302]  range of (lead - data): 0.022 .. 0.045
+reach data [ 9.7 11.6 13.3 14.8 17.4 20.4 23.3]  corrected [ 8.4 10.2 12.2 14.6 17.3 20.3 23.9]  rel. diff [ 0.155  0.137  0.086  0.014  0.008  0.003 -0.024]
+letter figures installed in paper/figures/

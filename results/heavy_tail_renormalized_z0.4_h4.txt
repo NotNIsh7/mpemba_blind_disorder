@@ -1,0 +1,8 @@
+# renormalized resistor chain, J = v^z, z=0.4, alpha=1.250, predicted exponent -0.200, h0=4.0, nsamp=1000
+#    L   median|r| V=0   median|r| V=4   median ratio
+    64   0.11054   0.10768   1.0055
+   256   0.07922   0.07920   1.0063
+  1024   0.05789   0.05776   1.0072
+  4096   0.04177   0.04156   1.0043
+# V=0.0: fitted exponent -0.233 (predicted -0.200)
+# V=4.0: fitted exponent -0.229 (predicted -0.200)

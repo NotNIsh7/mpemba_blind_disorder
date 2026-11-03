@@ -1,0 +1,37 @@
+# 1. counter circuit vs target |Psi_b>   (L, Q, bias): max amplitude error, counter weight off |0>
+   L=4 Q=2 cos2pix a=0.7 : 5.6e-17  3.0e-33
+   L=4 Q=2 random        : 2.8e-16  5.3e-34
+   L=6 Q=3 cos2pix a=0.7 : 1.4e-16  3.8e-33
+   L=6 Q=3 random        : 1.8e-16  3.6e-34
+   L=7 Q=2 cos2pix a=0.7 : 5.6e-17  2.0e-33
+   L=7 Q=2 random        : 2.2e-16  1.7e-33
+   L=8 Q=4 cos2pix a=0.7 : 1.7e-16  4.3e-33
+   L=8 Q=4 random        : 1.5e-16  4.4e-34
+   L=9 Q=5 cos2pix a=0.7 : 8.3e-17  5.3e-33
+   L=9 Q=5 random        : 1.7e-16  6.0e-33
+# counter circuit: worst error 2.8e-16
+# 2. random-Z dephasing of |Psi_b> gives rho_b (max entrywise error)
+   L=4 Q=2: 5.6e-17
+   L=6 Q=3: 3.1e-16
+# 3. four-qubit circuit: max amplitude error vs Eq. (Psi_b) at a = -1, 0, 0.2, 1
+   a=-1.0: amplitude 2.2e-16, dephased density matrix 1.7e-16
+   a=+0.0: amplitude 2.2e-16, dephased density matrix 5.6e-17
+   a=+0.2: amplitude 1.1e-16, dephased density matrix 5.6e-17
+   a=+1.0: amplitude 5.6e-17, dephased density matrix 1.7e-16
+   angles at a=0.2 (theta1, theta2|0, theta2|1, beta): 1.665214, 1.848022, 1.160546, 1.429844
+   densities at a=0.2: 0.547139, 0.452861, 0.452861, 0.547139
+# 4. heralded preparation: success probability and optimum
+   z=0.5: P_succ 0.141281 (formula 0.141281), fidelity after herald 1.000000000000
+   z=1.0: P_succ 0.250333 (formula 0.250333), fidelity after herald 1.000000000000
+   z=2.0: P_succ 0.141281 (formula 0.141281), fidelity after herald 1.000000000000
+   optimum: sum p_i = Q at z=1.0000; grid maximum at z=1.0000; P_succ=0.2503, [2 pi L nu(1-nu)]^(-1/2)=0.2523
+# 5. affine states P(1 + eps A_f)P/d: density linearity, sampler, SWAP loading
+   eps = 0.5 / M_f: min probability 0.007, max |<n_i> - nu - eps chi_L f_i| = 8.7e-17, mean acceptance 0.6667
+   eps = 1.0 / M_f: min probability 0.000, max |<n_i> - nu - eps chi_L f_i| = 8.3e-17, mean acceptance 0.5000
+   SWAP loading: at most 4 swaps over all 70 configurations (min(Q, L-Q) = 4)
+   M_f = 2.6131 for L=8, Q=4 (sum of the Q largest entries of f)
+# 6. measuring r: late-time ratio of density responses, interacting lattice gas
+   sample 0: r = +0.014464904; R12/R11 at t = 2, 5, 10 /(lam1-lam2): +0.014331218, +0.014464812, +0.014464904; same at eps/3: +0.014331218, +0.014464812, +0.014464904
+   sample 1: r = -0.026902348; R12/R11 at t = 2, 5, 10 /(lam1-lam2): -0.026739736, -0.026903146, -0.026902354; same at eps/3: -0.026739736, -0.026903146, -0.026902354
+   sample 2: r = -0.005454255; R12/R11 at t = 2, 5, 10 /(lam1-lam2): -0.005311575, -0.005449661, -0.005454224; same at eps/3: -0.005311575, -0.005449661, -0.005454224
+   sample 3: r = -0.003217500; R12/R11 at t = 2, 5, 10 /(lam1-lam2): -0.003196662, -0.003217064, -0.003217497; same at eps/3: -0.003196662, -0.003217064, -0.003217497
