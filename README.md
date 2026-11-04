@@ -1,6 +1,6 @@
-# Mpemba effect from disorder-blind state preparation: code and data
+# Disorder-blind Mpemba acceleration of quantum state preparation: code and data
 
-Code and data for the letter *Mpemba effect from disorder-blind state preparation*. The LaTeX source of the letter
+Code and data for the letter *Disorder-blind Mpemba acceleration of quantum state preparation*. The LaTeX source of the letter
 will be added here on submission; until then `paper/` holds the figures only.
 
 A preparation designed to cancel the slow mode of a clean dephased XX chain, a smooth density
