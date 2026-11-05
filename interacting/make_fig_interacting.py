@@ -9,7 +9,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 RES = os.path.join(ROOT, "results")
 OUT = os.path.join(ROOT, "paper", "figures", "fig_interacting.pdf")
 
-INK, INK2, GRID = "#1f1f1e", "#5f5e58", "#d9d8d2"
+INK, INK2 = "black", "0.4"
 RAMP = {0.0: "#86b6ef", 1.0: "#3987e5", 2.0: "#1c5cab", 4.0: "#0d366b"} 
 MARK = {0.0: "o", 1.0: "s", 2.0: "^", 4.0: "D"}
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
@@ -40,14 +40,9 @@ def boot_median(x, rng, nb=2000):
 
 
 def style(ax):
-    ax.tick_params(colors=INK2, labelsize=7, length=3, width=0.6)
-    for s in ("top", "right"):
-        ax.spines[s].set_visible(False)
-    for s in ("left", "bottom"):
-        ax.spines[s].set_color(INK2)
-        ax.spines[s].set_linewidth(0.6)
-    ax.grid(True, color=GRID, lw=0.5)
-    ax.set_axisbelow(True)
+    ax.tick_params(labelsize=7, length=3, width=0.6)
+    for s in ax.spines.values():
+        s.set_linewidth(0.6)
 
 
 def panel_bounded(ax, title="(a) bounded fields"):
@@ -69,7 +64,7 @@ def panel_bounded(ax, title="(a) bounded fields"):
     ax.set_xticks([8, 16, 24, 32])
     ax.legend(ncol=2, fontsize=6.3, frameon=False, loc="lower left", handlelength=1.3,
               columnspacing=0.8, borderaxespad=0.2)
-    ax.set_title(title, loc="left", fontsize=7.5, color=INK)
+    ax.set_title(title, loc="left", fontsize=8)
     style(ax)
 
 
@@ -86,7 +81,7 @@ def panel_bounded_scatter(ax, title="(b) $L=24,32$"):
     ax.set_ylim(-lim, lim)
     ax.set_xlabel(r"$r$, resistor chain")
     ax.set_ylabel(r"$r$ at $V=4$")
-    ax.set_title(title, loc="left", fontsize=7.5, color=INK)
+    ax.set_title(title, loc="left", fontsize=8)
     style(ax)
 
 
@@ -109,7 +104,7 @@ def panel_heavy_ratio(ax, rng, title=r"(c) heavy tails, $\alpha=1.25$"):
     ax.set_ylim(0.94, 1.01)
     ax.set_xticks([8, 12, 16, 20, 24])
     ax.legend(fontsize=6.3, frameon=False, loc="lower right", borderaxespad=0.2)
-    ax.set_title(title, loc="left", fontsize=7.5, color=INK)
+    ax.set_title(title, loc="left", fontsize=8)
     style(ax)
 
 
@@ -125,13 +120,13 @@ def panel_heavy_scatter(ax, title="(d) $L=24$"):
     ax.set_ylim(-lim, lim)
     ax.set_xlabel(r"$r$, resistor chain")
     ax.set_ylabel(r"$r$ at $V=4$")
-    ax.set_title(title, loc="left", fontsize=7.5, color=INK)
+    ax.set_title(title, loc="left", fontsize=8)
     style(ax)
 
 
 def setup():
-    plt.rcParams.update({"font.size": 7.5, "axes.labelcolor": INK, "text.color": INK,
-                         "font.family": "serif", "mathtext.fontset": "cm"})
+    plt.rcParams.update({"font.size": 7.5, "axes.labelsize": 8, "legend.fontsize": 6.2,
+                         "axes.linewidth": 0.6, "mathtext.fontset": "cm"})
 
 
 def main():
